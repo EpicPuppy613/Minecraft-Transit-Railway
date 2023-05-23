@@ -1,6 +1,6 @@
 package mtr.block;
 
-import mtr.data.IPIDS;
+import mtr.data.PIDS.IPIDS;
 import mtr.mappings.BlockDirectionalMapper;
 import mtr.mappings.EntityBlockMapper;
 import mtr.mappings.Text;

@@ -6,6 +6,7 @@ import mtr.block.BlockArrivalProjectorBase;
 import mtr.block.IBlock;
 import mtr.client.ClientData;
 import mtr.data.*;
+import mtr.data.PIDS.IPIDS;
 import mtr.mappings.BlockEntityMapper;
 import mtr.mappings.BlockEntityRendererMapper;
 import mtr.mappings.Text;
@@ -56,7 +57,7 @@ public class RenderPIDS<T extends BlockEntityMapper> extends BlockEntityRenderer
 
 	public RenderPIDS(BlockEntityRenderDispatcher dispatcher, int maxArrivals, int linesPerArrival, float startX, float startY, float startZ, float maxHeight, int maxWidth, boolean rotate90, boolean renderArrivalNumber, PIDSType renderType, int textColor, int firstTrainColor, float textPadding, boolean appendDotAfterMin) {
 		super(dispatcher);
-		scale = 160 * (maxArrivals * linesPerArrival) / maxHeight * textPadding;
+		scale = 160 * maxArrivals * linesPerArrival / maxHeight * textPadding;
 		totalScaledWidth = scale * maxWidth / 16;
 		destinationStart = renderArrivalNumber ? scale * 2 / 16 : 0;
 		switch (renderType) {
